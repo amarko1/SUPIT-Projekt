@@ -1,0 +1,452 @@
+/* NAVBAR */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* smooth scrool */
+    scroll-behavior: smooth;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    z-index: 1;
+    margin-bottom: 100px;
+}
+
+.left-list, .right-list {
+  display: flex;
+  align-items: center;
+}
+
+.right-list {
+    justify-content: flex-end;
+}
+
+#header a{
+  text-decoration: none;
+}
+
+#header a:hover{
+  color: yellow;
+}
+
+#header > ul, li, a, img{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    padding-left: 5px;
+    color: white;
+    font-family: 'Segoe UI';
+    text-transform: bold;
+    font-size: 1em;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#header li img{
+    width: 19px;
+    height: 19px;
+}
+
+/* BOJE IKONA */
+#header .list-item1 img {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(59%) saturate(3104%) hue-rotate(240deg) brightness(93%) contrast(98%);
+}
+
+#header .list-item2 img {
+    filter: brightness(0) invert(1) sepia(100%) saturate(7500%) hue-rotate(10deg);
+}
+/* BOJE IKONA */
+
+#header .right-list li a {
+    color: orange; 
+}
+
+#header .right-list li a:hover {
+    color: yellow; 
+}
+/* NAVBAR */
+
+#content h1{
+    font-family: 'Segoe UI';
+    text-align: center; 
+    border-bottom: 3px solid orange;
+    padding: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#content img{
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    padding-top: 20px;
+    padding-left: 0;
+    margin-left: 0;
+}
+#nasevrijednosti{
+    padding-top: 50px;
+}
+
+#nasevrijednosti > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(202, 33, 202);
+}
+
+#vrijednosti{
+    background-color: rgb(182, 174, 174);
+    font-weight: 100;
+    padding-top: 10px;
+}
+
+#vrijednosti #first{
+    font-size: .9em;
+    font-family: cursive;
+    text-align: center;
+}
+
+#vrijednosti #second{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: .9em;
+    font-family: cursive;
+    text-align: center;
+}
+
+#kocke{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 60px auto;
+    width: 75%;
+    padding: 10px;
+}
+
+.stupac {
+    width: calc(33.3% - 10px);
+    margin-bottom: 20px;
+}
+
+.stupac > h2 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    border-bottom: 0.1px solid rgb(39, 37, 37);
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#kocke p{
+    font-family: 'Lucida Sans';
+    font-size: .8em;
+    font-weight: 100;
+}
+
+#kocke .stupac {
+    box-sizing: border-box;
+    padding-top: 0;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+  
+#kocke .stupac:first-child {
+    margin-right: 1%;
+}
+  
+#kocke .stupac:last-child {
+    margin-left: 1%;
+}
+
+#nasaPovijest{
+    background-color: rgb(182, 174, 174);
+    font-weight: 100;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#nasaPovijest p{
+    font-size: .9em;
+    font-family: cursive;
+    text-align: center;
+}
+
+#Povijest h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(202, 33, 202);
+}
+
+#kocke1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 60px auto;
+    width: 75%;
+    padding: 10px;
+}
+  
+.stupac1 {
+    width: calc(33.3% - 10px);
+    margin-bottom: 20px;
+}
+
+#kocke1 .stupac1 {
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+
+
+#kocke1 .stupac1 {
+    box-sizing: border-box;
+    padding: 1%;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.stupac1 > h2 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    border-bottom: 0.1px solid rgb(39, 37, 37);
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#kocke1 p{
+    font-family: 'Lucida Sans';
+    font-size: .8em;
+    font-weight: 100;
+}
+
+.stupac1 > h2 .blue{
+    color: blue;
+}
+
+#grupa{
+    background-color: rgb(182, 174, 174);
+    font-weight: 100;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#grupa p{
+    font-size: .9em;
+    font-family: cursive;
+    text-align: center;
+}
+
+#algebraGrupa > h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(202, 33, 202);
+}
+
+#kocke3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    width: 75%;
+    padding: 10px;
+}
+  
+.stupac2 {
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+}
+
+#kocke3 .stupac2 {
+    box-sizing: border-box;
+    padding: 1%;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+#ec > img{
+    width: 100px;
+    height: 100px;
+}
+
+#vue > img{
+    width: 100px;
+    height: 100px;
+}
+#Cisco > img{
+    width: 100px;
+    height: 100px;
+}
+
+#microsoft img{
+    width: 200px;
+    height: 100px;
+}
+
+.stupac2 > img{
+    width: 250px;
+    height: 100px;
+}
+
+.stupac2 > h2 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    border-bottom: 0.1px solid rgb(39, 37, 37);
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+#kakodonas h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(202, 33, 202);
+}
+
+#background{
+    background-image: url(/img/kakoDoNas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 0px;
+}
+
+#mainKocke{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: 50px auto;
+    padding: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+    column-gap: 45px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    margin-bottom: 0;
+}
+
+/* Desno poravnanje */
+#mainKocke p {
+    position: relative;
+    padding-left: 50px;
+}
+
+#mainKocke p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+}
+/* Desno poravnanje */
+
+#kocke5{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    height: 90%;
+    width: 100%;
+}
+
+#kocke4{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    height: 90%;
+    width: 100%;
+} 
+
+#kocke4 .stupac3{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#kocke5 .stupac4{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#mapa iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#mapa {
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+
+#footer {
+    position: relative;
+    margin-top: 0px;
+    padding: 0;
+    background: url('../img/zaiskri-bg.jpg');
+    background-size: cover;
+}
+
+#footer img {
+    width: calc(100% + 5px);
+    height: 500px;
+    background-size: cover;
+}
+
+.text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.text-container h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+  
+.text-container h3 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: red;
+    margin-top: 10px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.stupac3 > h2 .blue1{
+    color: rgb(0, 183, 255);
+}
+
+.stupac4 > h2 .blue1{
+    color: rgb(0, 183, 255);
+}
