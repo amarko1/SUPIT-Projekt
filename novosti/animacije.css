@@ -1,0 +1,39 @@
+/* Animacije */
+
+#fade1{
+    /* fade animation */
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  
+  #content {
+    animation: slideInFromTop 1s ease;
+  }
+  
+  #naslov h2 {
+    animation: slideInFromBottom 1s ease;
+  }
+  
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  /* Animacije */

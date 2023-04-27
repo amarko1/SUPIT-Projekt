@@ -1,5 +1,6 @@
 /* NAVBAR */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -8,7 +9,11 @@ html, body {
     overflow-x: hidden;
 }
 
-#header{
+body {
+    
+}
+
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,24 +22,28 @@ html, body {
     margin-bottom: 100px;
 }
 
-.left-list, .right-list {
-  display: flex;
-  align-items: center;
+.left-list,
+.right-list {
+    display: flex;
+    align-items: center;
 }
 
 .right-list {
     justify-content: flex-end;
 }
 
-#header a{
-  text-decoration: none;
+#header a {
+    text-decoration: none;
 }
 
-#header a:hover{
-  color: yellow;
+#header a:hover {
+    color: yellow;
 }
 
-#header > ul, li, a, img{
+#header>ul,
+li,
+a,
+img {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -53,40 +62,42 @@ html, body {
     width: 100%;
 }
 
-#header li img{
+#header li img {
     width: 19px;
     height: 19px;
 }
 
 /* BOJE IKONA */
 #header .list-item1 img {
-  filter: brightness(0) saturate(100%) invert(22%) sepia(59%) saturate(3104%) hue-rotate(240deg) brightness(93%) contrast(98%);
+    filter: brightness(0) saturate(100%) invert(22%) sepia(59%) saturate(3104%) hue-rotate(240deg) brightness(93%) contrast(98%);
 }
 
 #header .list-item2 img {
     filter: brightness(0) invert(1) sepia(100%) saturate(7500%) hue-rotate(10deg);
 }
+
 /* BOJE IKONA */
 
 #header .right-list li a {
-    color: orange; 
+    color: orange;
 }
 
 #header .right-list li a:hover {
-    color: yellow; 
+    color: yellow;
 }
+
 /* NAVBAR */
 
-#content h1{
+#content h1 {
     font-family: 'Segoe UI';
-    text-align: center; 
+    text-align: center;
     border-bottom: 3px solid orange;
     padding: 30px;
     width: 50%;
     margin: 0 auto;
 }
 
-#content img{
+#content img {
     object-fit: cover;
     width: 100%;
     height: 500px;
@@ -94,11 +105,12 @@ html, body {
     padding-left: 0;
     margin-left: 0;
 }
-#nasevrijednosti{
+
+#nasevrijednosti {
     padding-top: 50px;
 }
 
-#nasevrijednosti > h2 {
+#nasevrijednosti>h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 2em;
@@ -107,19 +119,22 @@ html, body {
     color: rgb(202, 33, 202);
 }
 
-#vrijednosti{
+#vrijednosti {
     background-color: rgb(182, 174, 174);
     font-weight: 100;
     padding-top: 10px;
+    /* fade animation */
+    opacity: 0;
+    transition: opacity 2s ease-in;
 }
 
-#vrijednosti #first{
+#vrijednosti #first {
     font-size: .9em;
     font-family: cursive;
     text-align: center;
 }
 
-#vrijednosti #second{
+#vrijednosti #second {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: .9em;
@@ -127,7 +142,7 @@ html, body {
     text-align: center;
 }
 
-#kocke{
+#kocke {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -141,7 +156,7 @@ html, body {
     margin-bottom: 20px;
 }
 
-.stupac > h2 {
+.stupac>h2 {
     text-transform: uppercase;
     font-size: 1.1em;
     border-bottom: 0.1px solid rgb(39, 37, 37);
@@ -149,7 +164,7 @@ html, body {
     padding-bottom: 15px;
 }
 
-#kocke p{
+#kocke p {
     font-family: 'Lucida Sans';
     font-size: .8em;
     font-weight: 100;
@@ -164,30 +179,30 @@ html, body {
     margin-bottom: 20px;
     padding-bottom: 30px;
 }
-  
+
 #kocke .stupac:first-child {
     margin-right: 1%;
 }
-  
+
 #kocke .stupac:last-child {
     margin-left: 1%;
 }
 
-#nasaPovijest{
+#nasaPovijest {
     background-color: rgb(182, 174, 174);
     font-weight: 100;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-#nasaPovijest p{
+#nasaPovijest p {
     font-size: .9em;
     font-family: cursive;
     text-align: center;
     padding: 10px 30px 0 30px;
 }
 
-#Povijest h2{
+#Povijest h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 2em;
@@ -204,7 +219,7 @@ html, body {
     width: 75%;
     padding: 10px;
 }
-  
+
 .stupac1 {
     width: calc(33.3% - 10px);
     margin-bottom: 20px;
@@ -223,7 +238,7 @@ html, body {
     padding-bottom: 30px;
 }
 
-.stupac1 > h2 {
+.stupac1>h2 {
     text-transform: uppercase;
     font-size: 1.1em;
     border-bottom: 0.1px solid rgb(39, 37, 37);
@@ -231,31 +246,31 @@ html, body {
     padding-bottom: 15px;
 }
 
-#kocke1 p{
+#kocke1 p {
     font-family: 'Lucida Sans';
     font-size: .8em;
     font-weight: 100;
 }
 
-.stupac1 > h2 .blue{
+.stupac1>h2 .blue {
     color: blue;
 }
 
-#grupa{
+#grupa {
     background-color: rgb(182, 174, 174);
     font-weight: 100;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-#grupa p{
+#grupa p {
     font-size: .9em;
     font-family: cursive;
     text-align: center;
     padding: 10px 30px 0 30px;
 }
 
-#algebraGrupa > h2{
+#algebraGrupa>h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 2em;
@@ -274,7 +289,7 @@ html, body {
     width: 75%;
     padding: 10px;
 }
-  
+
 .stupac2 {
     width: calc(25% - 10px);
     margin-bottom: 20px;
@@ -287,31 +302,32 @@ html, body {
     padding-bottom: 30px;
 }
 
-#ec > img{
+#ec>img {
     width: 100px;
     height: 100px;
 }
 
-#vue > img{
-    width: 100px;
-    height: 100px;
-}
-#Cisco > img{
+#vue>img {
     width: 100px;
     height: 100px;
 }
 
-#microsoft img{
+#Cisco>img {
+    width: 100px;
+    height: 100px;
+}
+
+#microsoft img {
     width: 200px;
     height: 100px;
 }
 
-.stupac2 > img{
+.stupac2>img {
     width: 250px;
     height: 100px;
 }
 
-.stupac2 > h2 {
+.stupac2>h2 {
     text-transform: uppercase;
     font-size: 1.1em;
     border-bottom: 0.1px solid rgb(39, 37, 37);
@@ -319,7 +335,7 @@ html, body {
     padding-bottom: 20px;
 }
 
-#kakodonas h2{
+#kakodonas h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 2em;
@@ -328,7 +344,7 @@ html, body {
     color: rgb(202, 33, 202);
 }
 
-#background{
+#background {
     background-image: url(/img/kakoDoNas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -336,7 +352,7 @@ html, body {
     margin-bottom: 0px;
 }
 
-#mainKocke{
+#mainKocke {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -366,9 +382,10 @@ html, body {
     width: 50px;
     height: 100%;
 }
+
 /* Desno poravnanje */
 
-#kocke5{
+#kocke5 {
     border: 1px solid black;
     padding: 10px;
     background-color: white;
@@ -376,26 +393,26 @@ html, body {
     width: 100%;
 }
 
-#kocke4{
+#kocke4 {
     border: 1px solid black;
     padding: 10px;
     background-color: white;
     height: 90%;
     width: 100%;
-} 
+}
 
-#kocke4 .stupac3{
+#kocke4 .stupac3 {
     grid-row: 1/2;
     grid-column: 1/2;
 }
 
-#kocke5 .stupac4{
+#kocke5 .stupac4 {
     grid-row: 1/2;
     grid-column: 1/2;
 }
 
 #mapa iframe {
-    width: 100%;
+    width: 102.2%;
     height: 100%;
 }
 
@@ -429,7 +446,7 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-  
+
 .text-container h1 {
     text-transform: uppercase;
     font-size: 3em;
@@ -437,7 +454,7 @@ html, body {
     margin-bottom: 10px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-  
+
 .text-container h3 {
     text-transform: uppercase;
     font-size: 3em;
@@ -446,10 +463,93 @@ html, body {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.stupac3 > h2 .blue1{
+.stupac3>h2 .blue1 {
     color: rgb(0, 183, 255);
 }
 
-.stupac4 > h2 .blue1{
+.stupac4>h2 .blue1 {
     color: rgb(0, 183, 255);
 }
+
+/* Animacije */
+
+/* Hide the right list initially */
+.right-list {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    transition: right 1s ease;
+    transition-delay: 1.5s;
+    animation: bounce 0.8s ease forwards;
+    animation-delay: 3s;
+}
+
+/* Position the left list to the left */
+.left-list {
+    float: left;
+}
+
+/* When the page loads, show the right list */
+#header.loaded .right-list {
+    right: 0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(20px);
+    }
+
+    40% {
+        transform: translateX(-15px);
+    }
+
+    60% {
+        transform: translateX(0);
+    }
+
+    80% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#content img {
+    animation: slideInFromTop 2s ease;
+}
+
+#content h1 {
+    animation: slideInFromBottom 2s ease;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animacije */
