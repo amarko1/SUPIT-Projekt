@@ -7,9 +7,14 @@
     <title>O nama</title>
     <link rel="stylesheet" href="O nama.css">
     <link rel="stylesheet" href="/Kontakt/kontakt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c863da6dab.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/Kontakt/kontakt.js"></script>
     <script src="O nama.js"></script>
+    <script src="/NavBar/navbar.js"></script>
 </head>
 <body>
     <div id="header">
@@ -18,6 +23,7 @@
             <li class="list-item2"><a href="/Pocetna/Početna.html"><img src="/img/home.svg" alt="home" style="fill: orange;"> Početna</a></li>
             <li class="list-item2"><a href="/O nama/O nama.html"><img src="/img/envelope.svg" alt="" style="fill: orange;"> O nama</a></li>
             <li class="list-item2"><a href="/novosti/novosti.html"><img src="/img/info.svg" alt="" style="fill: orange;"> Novosti</a></li>
+            <li class="list-item2"><a href="/NastavniPlan/nastavniplan.html"><img src="/img/info.svg" alt="" style="fill: orange;"> Nastavni plan</a></li>
             <li class="list-item2"><a href="#contact-form" onclick="ShowForm()"><img src="/img/book-user.svg" alt="" style="fill: orange;"> Kontakt</a></li>
         </ul>
         <ul class="right-list">
@@ -317,19 +323,23 @@
                 </div>
             </div>
             <div class="stupac2">
-                <h2>VUE Ispitni centar za testiranje kandidata</h2>
+                <h2 id="vue1">VUE Ispitni centar za testiranje kandidata</h2>
                 <div id="vue">
                     <img src="/img o nama/VUElogo.jpg" alt="VUE Ispitni centar">
                 </div>
             </div>
             <div class="stupac2">
                 <h2>Autodesk trening centar za AutoCAD, Inventor i 3D Studio alate</h2>
-                <img src="/img o nama/autodesk.png" alt="Autodesk trening centar">
+                <div id="auto">
+                    <img src="/img o nama/autodesk.png" alt="Autodesk trening centar">
+                </div>
             </div>
 
             <div class="stupac2">
                 <h2>Adobe autorizirani trening partner za grafičke i web aplikacije </h2>
-                <img src="/img o nama/auth_training_cntr.gif" alt="Adobe autorizirani trening">
+                <div id="adobe">
+                    <img src="/img o nama/auth_training_cntr.gif" alt="Adobe autorizirani trening">
+                </div>
             </div>
 
             <div class="stupac2">
@@ -341,12 +351,16 @@
 
             <div class="stupac2">
                 <h2>Red Hat Akademija – podržava nastavu i certifikacijske ispite</h2>
-                <img src="/img o nama/redhatLogo.png" alt="Red Hat Akademija">
+                <div id="red">
+                    <img src="/img o nama/redhatLogo.png" alt="Red Hat Akademija">
+                </div>
             </div>
 
             <div class="stupac2">
                 <h2>Oracle Approved Education Center – provedba službene Oracle edukacije</h2>
-                <img src="/img o nama/oracleLogo.png" alt="Oracle Education">
+                <div id="oracle">
+                    <img src="/img o nama/oracleLogo.png" alt="Oracle Education">
+                </div>
             </div>
         </div>
 

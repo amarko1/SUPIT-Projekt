@@ -9,10 +9,6 @@ body {
     overflow-x: hidden;
 }
 
-body {
-    
-}
-
 #header {
     display: flex;
     justify-content: space-between;
@@ -126,19 +122,27 @@ img {
     /* fade animation */
     opacity: 0;
     transition: opacity 2s ease-in;
+    /* fade animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vrijednosti p{
+    width: 50%;
+    font-size: 1.35em;
+    font-family: 'Dancing Script';
 }
 
 #vrijednosti #first {
-    font-size: .9em;
-    font-family: cursive;
     text-align: center;
 }
 
 #vrijednosti #second {
+    
     padding-top: 30px;
     padding-bottom: 30px;
-    font-size: .9em;
-    font-family: cursive;
     text-align: center;
 }
 
@@ -193,11 +197,18 @@ img {
     font-weight: 100;
     padding-top: 25px;
     padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* opacity: 0;
+    transition: opacity 2s ease-in; */
 }
 
 #nasaPovijest p {
-    font-size: .9em;
-    font-family: cursive;
+    width: 50%;
+    font-size: 1.35em;
+    font-family: 'Dancing Script';
     text-align: center;
     padding: 10px 30px 0 30px;
 }
@@ -261,11 +272,16 @@ img {
     font-weight: 100;
     padding-top: 25px;
     padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #grupa p {
-    font-size: .9em;
-    font-family: cursive;
+    width: 50%;
+    font-size: 1.35em;
+    font-family: 'Dancing Script';
     text-align: center;
     padding: 10px 30px 0 30px;
 }
@@ -318,9 +334,40 @@ img {
 }
 
 #microsoft img {
+    width: 150px;
+    height: 100px;
+}
+
+#auto img {
+    width: 230px;
+    height: 100px;
+}
+
+#adobe img {
     width: 200px;
     height: 100px;
 }
+
+#red img {
+    width: 200px;
+    height: 100px;
+}
+
+#oracle img {
+    width: 230px;
+    height: 100px;
+}
+
+.stupac2 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stupac2 #vue1{
+    margin-bottom: 20px;
+}
+
 
 .stupac2>img {
     width: 250px;
@@ -432,7 +479,7 @@ img {
 #footer img {
     width: calc(100% + 5px);
     height: 500px;
-    background-size: cover;
+    box-sizing: border-box;
 }
 
 .text-container {
@@ -481,7 +528,7 @@ img {
     transition: right 1s ease;
     transition-delay: 1.5s;
     animation: bounce 0.8s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 2.5s;
 }
 
 /* Position the left list to the left */

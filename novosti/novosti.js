@@ -59,5 +59,3 @@ window.addEventListener('load', function() {
   content.style.opacity = '1';
 });
 
-
-

@@ -1,70 +1,12 @@
-/* NAVBAR */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    box-sizing: border-box;
+    /* smooth scrool */
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
-
-#header a{
-  text-decoration: none;
-}
-
-#header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.list{
-  display: flex;
-  align-items: center;
-}
-
-#header a:hover{
-  color: yellow;
-}
-
-#header{
-    background-color: black;
-}
-
-#header > ul, li, a, img{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    padding-left: 5px;
-    color: white;
-    font-family: 'Segoe UI';
-    text-transform: bold;
-    font-size: 1em;
-}
-
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-  }
-
-#header li img{
-    width: 19px;
-    height: 19px;
-}
-
-#header .list-item1 img {
-  filter: brightness(0) saturate(100%) invert(22%) sepia(59%) saturate(3104%) hue-rotate(240deg) brightness(93%) contrast(98%);
-}
-
-#header img {
-  filter: brightness(0) invert(1) sepia(100%) saturate(7500%) hue-rotate(10deg);
-    fill: orange;
-}
-/* NAVBAR */
-
 
 #bgkontakt1 {
     width: 100%;
@@ -131,12 +73,23 @@ h1{
     text-decoration: none;
 }
 
+#bgkontakt1{
+    animation: fadeIn 0.5s ease-in both;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 /* FOOTER */
 
 #footer {
-    height: 40%;
-    width: 100%;
     position: relative;
     margin-top: 0px;
     padding: 0;
@@ -146,7 +99,8 @@ h1{
 
 #footer img {
     width: calc(100% + 5px);
-    height: 350px;
+    height: 500px;
+    box-sizing: border-box;
 }
 
 .text-container {
@@ -160,7 +114,7 @@ h1{
     justify-content: center;
     align-items: center;
 }
-  
+
 .text-container h1 {
     text-transform: uppercase;
     font-size: 3em;
@@ -168,7 +122,7 @@ h1{
     margin-bottom: 10px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-  
+
 .text-container h3 {
     text-transform: uppercase;
     font-size: 3em;
@@ -177,3 +131,5 @@ h1{
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 /* FOOTER */
+
+  
