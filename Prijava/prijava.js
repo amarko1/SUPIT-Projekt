@@ -3,13 +3,13 @@ sessionStorage.setItem('username', null);
 sessionStorage.setItem('token', null);
 
 document.addEventListener('DOMContentLoaded', () => {
-  const forma = document.querySelector('form');
+  const form = document.querySelector('form');
   let pElement = document.createElement('p');
 
-  forma.addEventListener('submit', event => {
+  form.addEventListener('submit', event => {
     event.preventDefault();
 
-    const formData = new FormData(forma);
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
     fetch('https://www.fulek.com/data/api/user/login', {
@@ -24,21 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
           sessionStorage.setItem('Prijava', true);
           sessionStorage.setItem('username', data.data.username);
           sessionStorage.setItem('token', data.data.token);
-          Message('Uspjesna prijava! Na početnu stranicu za 3,2,1...', forma, pElement);
+          Message('Uspjesna prijava! Na početnu stranicu za 3,2,1...', form, pElement);
           setTimeout(() => {
             window.location.href = '../Pocetna/Početna.html';
           }, 3000);
         } else {
-            Message('User not found', forma, pElement);
+            Message('User not found', form, pElement);
         }
       })
       .catch(error => console.log(error));
   });
 });
 
-function Message(msg, forma, pelement) {
+function Message(msg, form, pelement) {
   pelement.innerHTML = msg;
   pelement.style.color = 'red';
   pelement.style.paddingTop = '5px';
-  forma.appendChild(pelement);
+  form.appendChild(pelement);
 }
