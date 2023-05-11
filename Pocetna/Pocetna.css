@@ -30,6 +30,7 @@ video {
   overflow: hidden;
   white-space: nowrap;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
 
 .text-container > h1::after {

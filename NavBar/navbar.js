@@ -1,7 +1,8 @@
 $(() => {
-    const nastavniPlan = document.getElementsByTagName('li')[5];
+    const nastavniPlan = document.getElementsByTagName('li')[4];
+    nastavniPlan.style.display = 'none';
 
-    if(sessionStorage.getItem('Prijava') === 'true'){
+    if (sessionStorage.getItem('Prijava') === 'true') {
         let liElement = $('li')[0];
         $(liElement).empty();
         $(liElement).append(`<a href="#"><i class="fa-sharp fa-solid fa-right-from-bracket"></i> odjavi <span style="margin-left: 5px;">${sessionStorage.getItem('username')}</span></a>`);
