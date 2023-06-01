@@ -22,6 +22,8 @@ main{
 }
 
 #content{
+    display: flex;
+    justify-content: space-between;
     width: 80%;
     margin: auto;
     margin-bottom: 30px;
@@ -35,11 +37,42 @@ label{
 }
 
 #content input[type="text"]{
-    width: 100%;
+    width: 200%;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 50px;
 }
+
+table{
+    width: 100%;
+}
+
+tr{
+    border-top: 1px solid #C9C9C9;
+}
+
+th, td{
+    text-align: center;
+    padding: 5px;
+}
+
+tfoot{
+    border-top: 4px solid black;
+    font-weight: bold;
+}
+
+th:first-of-type, th:last-of-type, td:first-of-type{
+    text-align: left;
+}
+
+tfoot tr td:first-of-type{
+    text-align: right;
+}
+
+tr:nth-child(even){
+    background-color: #E8E8E8;
+}
+
 
 /* FOOTER */
 
