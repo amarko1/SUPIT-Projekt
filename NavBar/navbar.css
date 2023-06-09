@@ -22,6 +22,12 @@ html, body {
   align-items: center;
 }
 
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 #header a:hover{
   color: yellow;
 }

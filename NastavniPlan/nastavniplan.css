@@ -4,6 +4,10 @@ main{
     overflow: hidden;
 }
 
+.ui-autocomplete li{
+    color: black; 
+}
+
 #title{
     width: 100%;
     margin-top: 99px;

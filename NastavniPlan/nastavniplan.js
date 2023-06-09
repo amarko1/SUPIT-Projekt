@@ -1,5 +1,10 @@
+$(document).ready(() => {
+    if($('tbody tr').length == 0){
+        $('thead').hide();
+    }
+});
+
 $(() => {
-    let zaglavlje = true;
     let ects = [];
     let sati = [];
     let predavanja = [];
@@ -14,39 +19,36 @@ $(() => {
             });
         },
         select: (e, ui) => {
-            if(zaglavlje){
-                $('table').append('<tr><th>Kolegij</th><th>ECTS</th><th>Sati</th><th>Predavanja</th><th>Vježbe</th><th>Tip</th></tr>');
-                zaglavlje = false;
-            }
-
             ucitajKolegije().then(data => {
                 const kolegij = data.filter((item) => item.kolegij === ui.item.label);
-                $('table').append(`<tr><td>${kolegij[0].kolegij}</td><td>${kolegij[0].ects}</td><td>${kolegij[0].sati}</td><td>${kolegij[0].predavanja}</td><td>${kolegij[0].vjezbe}</td><td>${kolegij[0].tip}</td><td><button type='button' class='btn btn-danger'>Delete</button></td></tr>`);
-                
+                $('tbody').append(`<tr><td>${kolegij[0].kolegij}</td><td>${kolegij[0].ects}</td><td>${kolegij[0].sati}</td><td>${kolegij[0].predavanja}</td><td>${kolegij[0].vjezbe}</td><td>${kolegij[0].tip}</td><td><button type='button' class='btn btn-danger'>Delete</button></td></tr>`);
+
                 UpdateUkupnoNakonSelect(ukupno, kolegij);
 
-                $('button').slice(-1).on('click', function (){
-                    const tr = $(this).parent().parent();
-                    const index = $(tr).index() - 1; //index -1, jer se ne racuna prvi tr koji je header tablice
-                    ukupno.forEach(value => {
-                        value.splice(index, 1);
-                    });
-                    $(tr).remove();
-                    if(Sum(ects) != 0){
-                        $('tfoot').remove();
-                        $('table').append(`<tfoot><tr><td>Ukupno</td><td>${Sum(ects)}</td><td>${Sum(sati)}</td><td>${Sum(predavanja)}</td><td>${Sum(vjezbe)}</td></tr></tfoot>`);
-                    }else{
-                        $('tr')[0].remove();
-                        $('tfoot').remove();
-                        zaglavlje = true;
-                    }
-                });
+                $('thead').show();
 
-                
-                $('tfoot').remove();
-                $('table').append(`<tfoot><tr><td>Ukupno</td><td>${Sum(ects)}</td><td>${Sum(sati)}</td><td>${Sum(predavanja)}</td><td>${Sum(vjezbe)}</td></tr></tfoot>`);
+                $('tfoot').empty();
+                $('tfoot').append(`<tr><td>Ukupno</td><td>${Sum(ects)}</td><td>${Sum(sati)}</td><td>${Sum(predavanja)}</td><td>${Sum(vjezbe)}</td></tr>`);
+
                 $('#odabirKolegija').val('');
             });
+        }
+    });
+
+    $('table').on('click', 'button', function () {
+        const tr = $(this).closest('tr');
+        const index = $('tbody tr').index(tr);
+        ukupno.forEach(value => {
+            value.splice(index, 1);
+        });
+        tr.remove();
+
+        if($('tbody tr').length == 0){
+            $('thead').hide();
+            $('tfoot').empty();
+        } else {
+            $('tfoot').empty();
+            $('tfoot').append(`<tr><td>Ukupno</td><td>${Sum(ects)}</td><td>${Sum(sati)}</td><td>${Sum(predavanja)}</td><td>${Sum(vjezbe)}</td></tr>`);
         }
     });
 });
@@ -70,11 +72,5 @@ function UpdateUkupnoNakonSelect(ukupno, kolegij){
 };
 
 function Sum(arr){
-    let sum = 0;
-
-    arr.forEach(value => {
-        sum += value;
-    });
-
-    return sum;
+    return arr.reduce((acc, curr) => acc + curr, 0);
 };
